@@ -1,0 +1,72 @@
+\documentclass{book}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}[definition]{Proposition}
+
+\setcounter{chapter}{1}
+\setcounter{section}{4}
+
+\begin{document}
+
+\section{Dimension}
+
+\begin{definition}
+Let $V$ be a vector space over a field $F$. A \textbf{subspace chain} in $V$ is a finite sequence of subspaces
+\[
+\{0\} = V_{0} \subsetneq V_{1} \subsetneq \dots \subsetneq V_{k} \subseteq V.
+\]
+\end{definition}
+
+\begin{definition}
+For a subspace $U \subseteq V$, the \textbf{dimension} of $U$ is
+\[
+\dim U = \sup\,\{\,k \mid \{0\} = V_{0} \subsetneq \dots \subsetneq V_{k} = U \text{ is a subspace chain}\,\}.
+\]
+If the supremum does not exist, $\dim U = \infty$.
+\end{definition}
+
+\begin{proposition}
+For any subspace $U \subseteq V$,
+\[
+\dim U + \dim(V / U) = \dim V.
+\]
+(Here $\infty + n = n + \infty = \infty + \infty = \infty$.)
+\end{proposition}
+
+\begin{proof}
+Let $\pi \colon V \to V / U$ be the quotient map.
+
+\textbf{$\dim V \le \dim U + \dim(V / U)$.}
+Take any subspace chain $\{0\} = V_{0} \subsetneq \dots \subsetneq V_{k} = V$ in $V$.
+For each $i$, either $V_{i-1} \cap U \subsetneq V_{i} \cap U$, or
+$\pi(V_{i-1}) \subsetneq \pi(V_{i})$ (or both): if neither were strict, then
+$V_{i-1} \cap U = V_{i} \cap U$ and $V_{i-1} + U = V_{i} + U$; picking
+$x \in V_{i} \setminus V_{i-1}$ and writing $x = y + u$ with $y \in V_{i-1}$,
+$u \in U$ (from the second equality) gives $u = x - y \in V_{i} \cap U
+= V_{i-1} \cap U \subseteq V_{i-1}$, so $x = y + u \in V_{i-1}$, contradiction.
+
+Thus the $k$ steps are split into those where the intersection with $U$
+strictly grows, and those where the image in $V / U$ strictly grows.
+After removing redundancies, the intersections form a chain in $U$,
+the images a chain in $V / U$, so $k \le \dim U + \dim(V / U)$.
+Taking the supremum over all chains in $V$ yields the inequality.
+
+\textbf{$\dim V \ge \dim U + \dim(V / U)$.}
+Take chains $\{0\} = U_{0} \subsetneq \dots \subsetneq U_{a} = U$ in $U$ and
+$\{0\} = W_{0} \subsetneq \dots \subsetneq W_{b} = V / U$ in $V / U$.
+Let $V_{j} = \pi^{-1}(W_{j})$; then $U = V_{0} \subsetneq \dots \subsetneq V_{b} = V$.
+Concatenating,
+\[
+\{0\} = U_{0} \subsetneq \dots \subsetneq U_{a} = U
+      = V_{0} \subsetneq \dots \subsetneq V_{b} = V
+\]
+is a chain in $V$ with $a + b$ strict inclusions.
+Thus $\dim V \ge a + b$ for any such $a$, $b$; taking suprema gives
+$\dim V \ge \dim U + \dim(V / U)$.
+\end{proof}
+
+\end{document}

@@ -12,25 +12,41 @@
 
 \begin{document}
 
-\section{Dimension}
+\section{Linear Maps}
 
 \begin{definition}
-Let $V$ be a vector space over a field $F$. A \textbf{subspace chain} in $V$ is a finite sequence of subspaces
+Let $V$, $W$ be vector spaces over a field $F$. A map $f \colon V \to W$ is \textbf{linear} if
+\begin{itemize}
+    \item $f(u + v) = f(u) + f(v)$ for all $u, v \in V$,
+    \item $f(\lambda v) = \lambda f(v)$ for all $\lambda \in F$, $v \in V$.
+\end{itemize}
+\end{definition}
+
+\begin{definition}
+For a linear map $f \colon V \to W$, the \textbf{kernel} and \textbf{image} are
 \[
-\{0\} = V_{0} \subsetneq V_{1} \subsetneq \dots \subsetneq V_{k} \subseteq V.
+\ker f = \{\, v \in V \mid f(v) = 0 \,\}, \qquad
+\operatorname{im} f = \{\, f(v) \mid v \in V \,\}.
 \]
 \end{definition}
 
-\begin{definition}
-For a subspace $U \subseteq V$, the \textbf{height} of $U$ is
-\[
-\operatorname{ht}(U) = \sup\,\{\,k \mid \{0\} = V_{0} \subsetneq \dots \subsetneq V_{k} = U \text{ is a subspace chain}\,\}.
-\]
-If the supremum does not exist, $\operatorname{ht}(U) = \infty$.
-\end{definition}
+\begin{proposition}
+$\ker f$ is a subspace of $V$, and $\operatorname{im} f$ is a subspace of $W$.
+\end{proposition}
 
-\begin{definition}
-The \textbf{dimension} of $V$ is $\dim V = \operatorname{ht}(V)$.
-\end{definition}
+\begin{proof}
+For $\ker f$: $f(0) = 0$, so $0 \in \ker f$. If $u, v \in \ker f$, then $f(u + v) = f(u) + f(v) = 0$, so $u + v \in \ker f$. If $v \in \ker f$ and $\lambda \in F$, then $f(\lambda v) = \lambda f(v) = 0$, so $\lambda v \in \ker f$.
+
+For $\operatorname{im} f$: $0 = f(0) \in \operatorname{im} f$. If $f(u), f(v) \in \operatorname{im} f$, then $f(u) + f(v) = f(u + v) \in \operatorname{im} f$. If $f(v) \in \operatorname{im} f$ and $\lambda \in F$, then $\lambda f(v) = f(\lambda v) \in \operatorname{im} f$.
+\end{proof}
+
+\begin{proposition}
+A linear map $f \colon V \to W$ is injective if and only if $\ker f = \{0\}$.
+\end{proposition}
+
+\begin{proof}
+If $f$ is injective and $f(v) = 0 = f(0)$, then $v = 0$, so $\ker f = \{0\}$.
+Conversely, if $\ker f = \{0\}$ and $f(u) = f(v)$, then $f(u - v) = 0$, so $u - v \in \ker f = \{0\}$, hence $u = v$.
+\end{proof}
 
 \end{document}

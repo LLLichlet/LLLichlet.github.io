@@ -1,0 +1,59 @@
+\documentclass{book}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}[definition]{Proposition}
+
+\setcounter{chapter}{1}
+\setcounter{section}{3}
+
+\begin{document}
+
+\section{Quotient Space}
+
+\begin{definition}
+Let $V$ be a vector space over a field $F$ and $U \subseteq V$ a subspace. For $v \in V$, the \textbf{coset} of $v$ modulo $U$ is
+\[
+v + U = \{\, v + u \mid u \in U \,\}.
+\]
+The \textbf{quotient space} $V / U$ is the set of all cosets
+\[
+V / U = \{\, v + U \mid v \in V \,\},
+\]
+with addition and scalar multiplication defined by
+\[
+(v + U) + (w + U) = (v + w) + U, \qquad
+\lambda(v + U) = \lambda v + U,
+\]
+for $v, w \in V$ and $\lambda \in F$.
+\end{definition}
+
+\begin{definition}
+The \textbf{quotient map} $\pi \colon V \to V / U$ is defined by
+\[
+\pi(v) = v + U.
+\]
+\end{definition}
+
+\begin{proposition}
+$\pi$ is a linear map, $\ker \pi = U$, and $\operatorname{im} \pi = V / U$.
+\end{proposition}
+
+\begin{proof}
+Linearity: $\pi(v + w) = (v + w) + U = (v + U) + (w + U) = \pi(v) + \pi(w)$, and $\pi(\lambda v) = \lambda v + U = \lambda(v + U) = \lambda \pi(v)$. Kernel: $\pi(v) = 0 + U$ iff $v + U = U$ iff $v \in U$. Image: every coset $v + U$ is $\pi(v)$.
+\end{proof}
+
+\begin{proposition}
+$V / U$ is a vector space over $F$.
+\end{proposition}
+
+\begin{proof}
+The operations are well-defined: if $v + U = v' + U$ and $w + U = w' + U$, then $v - v', w - w' \in U$, so $(v + w) - (v' + w') = (v - v') + (w - w') \in U$, hence $(v + w) + U = (v' + w') + U$; similarly, $\lambda v - \lambda v' = \lambda(v - v') \in U$, so $\lambda v + U = \lambda v' + U$.
+
+The zero vector is $0 + U = U$. The additive inverse of $v + U$ is $(-v) + U$. The eight vector space axioms follow directly from the corresponding axioms in $V$.
+\end{proof}
+
+\end{document}

@@ -22,6 +22,22 @@
         "back": "../index.html",
         "back_text": "Back to Index"
     },
+    "ch01/s01.html": {
+        "src": "src/ch01/s01.tex",
+        "title": "Definition — Coordinate-Free Linear Algebra",
+        "breadcrumb": [
+            {"text": "Contents", "href": "../index.html"},
+            {"text": "Vector Space", "href": "index.html"},
+            {"text": "Definition", "href": null}
+        ],
+        "nav": {
+            "prev": null,
+            "contents": "index.html",
+            "next": "s02.html"
+        },
+        "back": "../index.html",
+        "back_text": "Back to Index"
+    },
     "ch01/s02.html": {
         "src": "src/ch01/s02.tex",
         "title": "Subspace — Coordinate-Free Linear Algebra",
@@ -40,6 +56,38 @@
     },
     "ch01/s03.html": {
         "src": "src/ch01/s03.tex",
+        "title": "Linear Maps — Coordinate-Free Linear Algebra",
+        "breadcrumb": [
+            {"text": "Contents", "href": "../index.html"},
+            {"text": "Vector Space", "href": "index.html"},
+            {"text": "Linear Maps", "href": null}
+        ],
+        "nav": {
+            "prev": "s02.html",
+            "contents": "index.html",
+            "next": "s04.html"
+        },
+        "back": "../index.html",
+        "back_text": "Back to Index"
+    },
+    "ch01/s04.html": {
+        "src": "src/ch01/s04.tex",
+        "title": "Quotient Space — Coordinate-Free Linear Algebra",
+        "breadcrumb": [
+            {"text": "Contents", "href": "../index.html"},
+            {"text": "Vector Space", "href": "index.html"},
+            {"text": "Quotient Space", "href": null}
+        ],
+        "nav": {
+            "prev": "s03.html",
+            "contents": "index.html",
+            "next": "s05.html"
+        },
+        "back": "../index.html",
+        "back_text": "Back to Index"
+    },
+    "ch01/s05.html": {
+        "src": "src/ch01/s05.tex",
         "title": "Dimension — Coordinate-Free Linear Algebra",
         "breadcrumb": [
             {"text": "Contents", "href": "../index.html"},
@@ -47,25 +95,9 @@
             {"text": "Dimension", "href": null}
         ],
         "nav": {
-            "prev": "s02.html",
+            "prev": "s04.html",
             "contents": "index.html",
             "next": null
-        },
-        "back": "../index.html",
-        "back_text": "Back to Index"
-    },
-    "ch01/s01.html": {
-        "src": "src/ch01/s01.tex",
-        "title": "Definition — Coordinate-Free Linear Algebra",
-        "breadcrumb": [
-            {"text": "Contents", "href": "../index.html"},
-            {"text": "Vector Space", "href": "index.html"},
-            {"text": "Definition", "href": null}
-        ],
-        "nav": {
-            "prev": null,
-            "contents": "index.html",
-            "next": "s02.html"
         },
         "back": "../index.html",
         "back_text": "Back to Index"
