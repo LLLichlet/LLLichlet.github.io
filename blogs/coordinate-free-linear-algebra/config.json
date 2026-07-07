@@ -97,6 +97,22 @@
         "nav": {
             "prev": "s04.html",
             "contents": "index.html",
+            "next": "s06.html"
+        },
+        "back": "../index.html",
+        "back_text": "Back to Index"
+    },
+    "ch01/s06.html": {
+        "src": "src/ch01/s06.tex",
+        "title": "Isomorphism Theorems — Coordinate-Free Linear Algebra",
+        "breadcrumb": [
+            {"text": "Contents", "href": "../index.html"},
+            {"text": "Vector Space", "href": "index.html"},
+            {"text": "Isomorphism Theorems", "href": null}
+        ],
+        "nav": {
+            "prev": "s05.html",
+            "contents": "index.html",
             "next": null
         },
         "back": "../index.html",
