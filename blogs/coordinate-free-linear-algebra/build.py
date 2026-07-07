@@ -4,11 +4,21 @@ import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, "src")
 
-KATEX_HTML = """\
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
-        onload="renderMathInElement(document.body);"></script>"""
+KATEX_CSS = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">'
+
+KATEX_JS = """\
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\\\[", right: "\\\\]", display: true},
+            {left: "\\\\(", right: "\\\\)", display: false}
+        ]
+    });
+</script>"""
 
 
 def render_breadcrumb(items):
@@ -54,7 +64,8 @@ def build():
 
         html = template
         html = html.replace("{{TITLE}}", cfg["title"])
-        html = html.replace("{{KATEX}}", KATEX_HTML if cfg["katex"] else "")
+        html = html.replace("{{KATEX_CSS}}", KATEX_CSS if cfg["katex"] else "")
+        html = html.replace("{{KATEX_JS}}", KATEX_JS if cfg["katex"] else "")
         html = html.replace("{{BREADCRUMB}}", render_breadcrumb(cfg.get("breadcrumb")))
         html = html.replace("{{CONTENT}}", content)
         html = html.replace("{{NAVBAR}}", render_navbar(cfg.get("nav")))
@@ -63,7 +74,7 @@ def build():
 
         dest = os.path.join(ROOT, out_path)
         os.makedirs(os.path.dirname(dest), exist_ok=True)
-        with open(dest, "w", encoding="utf-8") as f:
+        with open(dest, "w", encoding="utf-8", newline="\n") as f:
             f.write(html)
         print(f"  {out_path}")
 

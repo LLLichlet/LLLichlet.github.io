@@ -3,10 +3,7 @@
 
 <head>
     <title>Definition — Coordinate-Free Linear Algebra</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
-        onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 </head>
 
 <body>
@@ -18,7 +15,46 @@
 
     <h2>Definition</h2>
 
-<p>Content coming soon~</p>
+<p>
+    Let $F$ be a field. A <strong>vector space</strong> over $F$ is a set $V$ equipped with two operations
+</p>
+
+$$
+\begin{aligned}
++       &\colon V \times V \to V, \quad (u, v) \mapsto u + v, \\
+\cdot   &\colon F \times V \to V, \quad (\lambda, v) \mapsto \lambda v,
+\end{aligned}
+$$
+
+<p>
+    satisfying the following axioms:
+</p>
+
+<ol>
+    <li>
+        $(V, +)$ is an abelian group. That is, for all $u, v, w \in V$,
+        <ul>
+            <li>$(u + v) + w = u + (v + w)$,</li>
+            <li>there exists $0 \in V$ such that $v + 0 = v$,</li>
+            <li>for each $v \in V$ there exists $-v \in V$ such that $v + (-v) = 0$,</li>
+            <li>$u + v = v + u$.</li>
+        </ul>
+    </li>
+    <li>
+        Scalar multiplication is compatible with field operations: for all $\lambda, \mu \in F$ and $u, v \in V$,
+        <ul>
+            <li>$\lambda(u + v) = \lambda u + \lambda v$,</li>
+            <li>$(\lambda + \mu)v = \lambda v + \mu v$,</li>
+            <li>$(\lambda\mu)v = \lambda(\mu v)$,</li>
+            <li>$1v = v$, where $1$ is the multiplicative identity of $F$.</li>
+        </ul>
+    </li>
+</ol>
+
+<p>
+    Elements of $V$ are called <strong>vectors</strong>; elements of $F$ are called <strong>scalars</strong>.
+</p>
+
 
 
     
@@ -32,6 +68,19 @@
 
 
     <p><a href="../index.html">Back to Index</a></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "\\(", right: "\\)", display: false}
+        ]
+    });
+</script>
 </body>
 
 </html>
