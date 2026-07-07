@@ -1,0 +1,36 @@
+\documentclass{book}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}[definition]{Proposition}
+
+\setcounter{chapter}{1}
+\setcounter{section}{2}
+
+\begin{document}
+
+\section{Dimension}
+
+\begin{definition}
+Let $V$ be a vector space over a field $F$. A \textbf{subspace chain} in $V$ is a finite sequence of subspaces
+\[
+\{0\} = V_{0} \subsetneq V_{1} \subsetneq \dots \subsetneq V_{k} \subseteq V.
+\]
+\end{definition}
+
+\begin{definition}
+For a subspace $U \subseteq V$, the \textbf{height} of $U$ is
+\[
+\operatorname{ht}(U) = \sup\,\{\,k \mid \{0\} = V_{0} \subsetneq \dots \subsetneq V_{k} = U \text{ is a subspace chain}\,\}.
+\]
+If the supremum does not exist, $\operatorname{ht}(U) = \infty$.
+\end{definition}
+
+\begin{definition}
+The \textbf{dimension} of $V$ is $\dim V = \operatorname{ht}(V)$.
+\end{definition}
+
+\end{document}

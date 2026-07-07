@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Dimension — Coordinate-Free Linear Algebra</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/LaTeXML.css" type="text/css">
+    <link rel="stylesheet" href="../css/ltx-article.css" type="text/css">
+</head>
+
+<body>
+
+    <p>
+        <a href="../index.html">Contents</a> &gt; <a href="index.html">Vector Space</a> &gt; Dimension
+    </p>
+<article class="ltx_document">
+<section id="Ch1.S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1.3 </span>Dimension</h2>
+
+<div id="Ch1.S3.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.3.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch1.S3.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Ch1.S3.Thmdefinition1.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> be a vector space over a field <math id="Ch1.S3.Thmdefinition1.p1.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>. A <span class="ltx_text ltx_font_bold">subspace chain</span> in <math id="Ch1.S3.Thmdefinition1.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a finite sequence of subspaces</p>
+<table id="Ch1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.Ex1.m1" class="ltx_Math" alttext="\{0\}=V_{0}\subsetneq V_{1}\subsetneq\dots\subsetneq V_{k}\subseteq V." display="block"><mrow><mrow><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow><mo>=</mo><msub><mi>V</mi><mn>0</mn></msub><mo>⊊</mo><msub><mi>V</mi><mn>1</mn></msub><mo>⊊</mo><mi mathvariant="normal">⋯</mi><mo>⊊</mo><msub><mi>V</mi><mi>k</mi></msub><mo>⊆</mo><mi>V</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="Ch1.S3.Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.3.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch1.S3.Thmdefinition2.p1" class="ltx_para">
+<p class="ltx_p">For a subspace <math id="Ch1.S3.Thmdefinition2.p1.m1" class="ltx_Math" alttext="U\subseteq V" display="inline"><mrow><mi>U</mi><mo>⊆</mo><mi>V</mi></mrow></math>, the <span class="ltx_text ltx_font_bold">height</span> of <math id="Ch1.S3.Thmdefinition2.p1.m2" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is</p>
+<table id="Ch1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.Ex2.m1" class="ltx_Math" alttext="\operatorname{ht}(U)=\sup\,\{\,k\mid\{0\}=V_{0}\subsetneq\dots\subsetneq V_{k}%
+=U\text{ is a subspace chain}\,\}." display="block"><mrow><mrow><mrow><mi>ht</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.1389em">=</mo><mrow><mo lspace="0.1389em" movablelimits="false" rspace="0.170em">sup</mo><mrow><mo rspace="0.170em" stretchy="false">{</mo><mi>k</mi><mo fence="true" lspace="0em" rspace="0em">∣</mo><mrow><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow><mo>=</mo><msub><mi>V</mi><mn>0</mn></msub><mo>⊊</mo><mi mathvariant="normal">⋯</mi><mo>⊊</mo><msub><mi>V</mi><mi>k</mi></msub><mo>=</mo><mrow><mi>U</mi><mo>⁢</mo><mtext> is a subspace chain</mtext></mrow></mrow><mo lspace="0.170em" stretchy="false">}</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">If the supremum does not exist, <math id="Ch1.S3.Thmdefinition2.p1.m3" class="ltx_Math" alttext="\operatorname{ht}(U)=\infty" display="inline"><mrow><mrow><mi>ht</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+</div>
+<div id="Ch1.S3.Thmdefinition3" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.3.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch1.S3.Thmdefinition3.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">dimension</span> of <math id="Ch1.S3.Thmdefinition3.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is <math id="Ch1.S3.Thmdefinition3.p1.m2" class="ltx_Math" alttext="\dim V=\operatorname{ht}(V)" display="inline"><mrow><mrow><mo rspace="0.167em">dim</mo><mi>V</mi></mrow><mo>=</mo><mrow><mi>ht</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</div>
+</section>
+</article>
+
+    <hr>
+
+    <p>
+        <a href="s02.html">Prev</a>
+        | <a href="index.html">Contents</a>
+        | Next
+    </p>
+    <p><a href="../index.html">Back to Index</a></p>
+</body>
+
+</html>
