@@ -3,61 +3,114 @@
 
 <head>
     <title>Definition — Coordinate-Free Linear Algebra</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/LaTeXML.css" type="text/css">
+    <link rel="stylesheet" href="../css/ltx-article.css" type="text/css">
 </head>
 
 <body>
-    
+
     <p>
         <a href="../index.html">Contents</a> &gt; <a href="index.html">Vector Space</a> &gt; Definition
     </p>
+<article class="ltx_document">
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Definition</h2>
 
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p1.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> be a field. A <span class="ltx_text ltx_font_bold">vector space</span> over <math id="S1.p1.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is a set <math id="S1.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> equipped with two operations</p>
+<table id="S1.Ex1" class="ltx_equationgroup ltx_eqn_table">
 
-    <h2>Definition</h2>
-
-<p>
-    Let $F$ be a field. A <strong>vector space</strong> over $F$ is a set $V$ equipped with two operations
-</p>
-
-$$
-\begin{aligned}
-+       &\colon V \times V \to V, \quad (u, v) \mapsto u + v, \\
-\cdot   &\colon F \times V \to V, \quad (\lambda, v) \mapsto \lambda v,
-\end{aligned}
-$$
-
-<p>
-    satisfying the following axioms:
-</p>
-
-<ol>
-    <li>
-        $(V, +)$ is an abelian group. That is, for all $u, v, w \in V$,
-        <ul>
-            <li>$(u + v) + w = u + (v + w)$,</li>
-            <li>there exists $0 \in V$ such that $v + 0 = v$,</li>
-            <li>for each $v \in V$ there exists $-v \in V$ such that $v + (-v) = 0$,</li>
-            <li>$u + v = v + u$.</li>
-        </ul>
-    </li>
-    <li>
-        Scalar multiplication is compatible with field operations: for all $\lambda, \mu \in F$ and $u, v \in V$,
-        <ul>
-            <li>$\lambda(u + v) = \lambda u + \lambda v$,</li>
-            <li>$(\lambda + \mu)v = \lambda v + \mu v$,</li>
-            <li>$(\lambda\mu)v = \lambda(\mu v)$,</li>
-            <li>$1v = v$, where $1$ is the multiplicative identity of $F$.</li>
-        </ul>
-    </li>
+<tbody id="S1.Ex1X"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex1X.m2" class="ltx_Math" alttext="\displaystyle+" display="inline"><mo>+</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex1X.m3" class="ltx_Math" alttext="\displaystyle\colon V\times V\to V,\quad(u,v)\mapsto u+v," display="inline"><mrow><mrow><mi></mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mrow><mi>V</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>V</mi></mrow><mo stretchy="false">→</mo><mi>V</mi></mrow><mo rspace="1.167em">,</mo><mrow><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">↦</mo><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S1.Ex1Xa"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex1Xa.m2" class="ltx_Math" alttext="\displaystyle\cdot" display="inline"><mo>⋅</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex1Xa.m3" class="ltx_Math" alttext="\displaystyle\colon F\times V\to V,\quad(\lambda,v)\mapsto\lambda v," display="inline"><mrow><mrow><mi></mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mrow><mi>F</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>V</mi></mrow><mo stretchy="false">→</mo><mi>V</mi></mrow><mo rspace="1.167em">,</mo><mrow><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">↦</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">satisfying the following axioms:</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<ol id="S1.I1" class="ltx_enumerate">
+<li id="S1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S1.I1.i1.p1.m1" class="ltx_Math" alttext="(V,+)" display="inline"><mrow><mo stretchy="false">(</mo><mi>V</mi><mo rspace="0em">,</mo><mo lspace="0em" rspace="0em">+</mo><mo stretchy="false">)</mo></mrow></math> is an abelian group. That is, for all <math id="S1.I1.i1.p1.m2" class="ltx_Math" alttext="u,v,w\in V" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi><mo>,</mo><mi>w</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>,</p>
+<ul id="S1.I1.i1.I1" class="ltx_itemize">
+<li id="S1.I1.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S1.I1.i1.I1.i1.p1.m1" class="ltx_Math" alttext="(u+v)+w=u+(v+w)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mi>w</mi></mrow><mo>=</mo><mrow><mi>u</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>+</mo><mi>w</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="S1.I1.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">there exists <math id="S1.I1.i1.I1.i2.p1.m1" class="ltx_Math" alttext="0\in V" display="inline"><mrow><mn>0</mn><mo>∈</mo><mi>V</mi></mrow></math> such that <math id="S1.I1.i1.I1.i2.p1.m2" class="ltx_Math" alttext="v+0=v" display="inline"><mrow><mrow><mi>v</mi><mo>+</mo><mn>0</mn></mrow><mo>=</mo><mi>v</mi></mrow></math>,</p>
+</div>
+</li>
+<li id="S1.I1.i1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">for each <math id="S1.I1.i1.I1.i3.p1.m1" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math> there exists <math id="S1.I1.i1.I1.i3.p1.m2" class="ltx_Math" alttext="-v\in V" display="inline"><mrow><mrow><mo>−</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math> such that <math id="S1.I1.i1.I1.i3.p1.m3" class="ltx_Math" alttext="v+(-v)=0" display="inline"><mrow><mrow><mi>v</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>,</p>
+</div>
+</li>
+<li id="S1.I1.i1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S1.I1.i1.I1.i4.p1.m1" class="ltx_Math" alttext="u+v=v+u" display="inline"><mrow><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo>=</mo><mrow><mi>v</mi><mo>+</mo><mi>u</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li id="S1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Scalar multiplication is compatible with field operations: for all <math id="S1.I1.i2.p1.m1" class="ltx_Math" alttext="\lambda,\mu\in F" display="inline"><mrow><mrow><mi>λ</mi><mo>,</mo><mi>μ</mi></mrow><mo>∈</mo><mi>F</mi></mrow></math> and <math id="S1.I1.i2.p1.m2" class="ltx_Math" alttext="u,v\in V" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>,</p>
+<ul id="S1.I1.i2.I1" class="ltx_itemize">
+<li id="S1.I1.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S1.I1.i2.I1.i1.p1.m1" class="ltx_Math" alttext="\lambda(u+v)=\lambda u+\lambda v" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="S1.I1.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S1.I1.i2.I1.i2.p1.m1" class="ltx_Math" alttext="(\lambda+\mu)v=\lambda v+\mu v" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>+</mo><mi>μ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><mrow><mi>μ</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="S1.I1.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S1.I1.i2.I1.i3.p1.m1" class="ltx_Math" alttext="(\lambda\mu)v=\lambda(\mu v)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>μ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>μ</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="S1.I1.i2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="S1.I1.i2.I1.i4.p1.m1" class="ltx_Math" alttext="1v=v" display="inline"><mrow><mrow><mn>1</mn><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mi>v</mi></mrow></math>, where <math id="S1.I1.i2.I1.i4.p1.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> is the multiplicative identity of <math id="S1.I1.i2.I1.i4.p1.m3" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
 </ol>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Elements of <math id="S1.p3.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> are called <span class="ltx_text ltx_font_bold">vectors</span>; elements of <math id="S1.p3.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> are called <span class="ltx_text ltx_font_bold">scalars</span>.</p>
+</div>
+</section>
+</article>
 
-<p>
-    Elements of $V$ are called <strong>vectors</strong>; elements of $F$ are called <strong>scalars</strong>.
-</p>
-
-
-
-    
     <hr>
 
     <p>
@@ -65,22 +118,7 @@ $$
         | <a href="index.html">Contents</a>
         | Next
     </p>
-
-
     <p><a href="../index.html">Back to Index</a></p>
-
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
-<script>
-    renderMathInElement(document.body, {
-        delimiters: [
-            {left: "$$", right: "$$", display: true},
-            {left: "$", right: "$", display: false},
-            {left: "\\[", right: "\\]", display: true},
-            {left: "\\(", right: "\\)", display: false}
-        ]
-    });
-</script>
 </body>
 
 </html>

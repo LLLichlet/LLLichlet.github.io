@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section{Definition}
+
+Let $F$ be a field. A \textbf{vector space} over $F$ is a set $V$ equipped with two operations
+\[
+\begin{aligned}
++       &\colon V \times V \to V, \quad (u, v) \mapsto u + v, \\
+\cdot   &\colon F \times V \to V, \quad (\lambda, v) \mapsto \lambda v,
+\end{aligned}
+\]
+satisfying the following axioms:
+
+\begin{enumerate}
+\item
+    $(V, +)$ is an abelian group. That is, for all $u, v, w \in V$,
+    \begin{itemize}
+        \item $(u + v) + w = u + (v + w)$,
+        \item there exists $0 \in V$ such that $v + 0 = v$,
+        \item for each $v \in V$ there exists $-v \in V$ such that $v + (-v) = 0$,
+        \item $u + v = v + u$.
+    \end{itemize}
+\item
+    Scalar multiplication is compatible with field operations: for all $\lambda, \mu \in F$ and $u, v \in V$,
+    \begin{itemize}
+        \item $\lambda(u + v) = \lambda u + \lambda v$,
+        \item $(\lambda + \mu)v = \lambda v + \mu v$,
+        \item $(\lambda\mu)v = \lambda(\mu v)$,
+        \item $1v = v$, where $1$ is the multiplicative identity of $F$.
+    \end{itemize}
+\end{enumerate}
+
+Elements of $V$ are called \textbf{vectors}; elements of $F$ are called \textbf{scalars}.
+
+\end{document}
