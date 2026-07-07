@@ -22,6 +22,22 @@
         "back": "../index.html",
         "back_text": "Back to Index"
     },
+    "ch01/s02.html": {
+        "src": "src/ch01/s02.tex",
+        "title": "Subspace — Coordinate-Free Linear Algebra",
+        "breadcrumb": [
+            {"text": "Contents", "href": "../index.html"},
+            {"text": "Vector Space", "href": "index.html"},
+            {"text": "Subspace", "href": null}
+        ],
+        "nav": {
+            "prev": "s01.html",
+            "contents": "index.html",
+            "next": null
+        },
+        "back": "../index.html",
+        "back_text": "Back to Index"
+    },
     "ch01/s01.html": {
         "src": "src/ch01/s01.tex",
         "title": "Definition — Coordinate-Free Linear Algebra",
@@ -33,7 +49,7 @@
         "nav": {
             "prev": null,
             "contents": "index.html",
-            "next": null
+            "next": "s02.html"
         },
         "back": "../index.html",
         "back_text": "Back to Index"

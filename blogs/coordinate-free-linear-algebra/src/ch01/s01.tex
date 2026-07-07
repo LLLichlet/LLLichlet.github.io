@@ -1,10 +1,18 @@
-\documentclass{article}
+\documentclass{book}
 \usepackage{amsmath}
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}[definition]{Proposition}
+
+\setcounter{chapter}{1}
 
 \begin{document}
 
 \section{Definition}
 
+\begin{definition}
 Let $F$ be a field. A \textbf{vector space} over $F$ is a set $V$ equipped with two operations
 \[
 \begin{aligned}
@@ -34,5 +42,29 @@ satisfying the following axioms:
 \end{enumerate}
 
 Elements of $V$ are called \textbf{vectors}; elements of $F$ are called \textbf{scalars}.
+\end{definition}
+
+\begin{definition}
+Let $S$ be any set and $F$ a field. The set
+\[
+F^{S} = \{ f \mid f \colon S \to F \}
+\]
+of all functions from $S$ to $F$ is a vector space over $F$ with operations defined pointwise:
+\[
+\begin{aligned}
+(f + g)(x) &= f(x) + g(x), \\
+(\lambda f)(x) &= \lambda \cdot f(x),
+\end{aligned}
+\]
+for all $f, g \in F^{S}$, $\lambda \in F$, and $x \in S$.
+\end{definition}
+
+\begin{proposition}
+$F^{S}$ is a vector space over $F$.
+\end{proposition}
+
+\begin{proof}
+Left as an exercise.
+\end{proof}
 
 \end{document}

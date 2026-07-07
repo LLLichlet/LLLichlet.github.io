@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Subspace — Coordinate-Free Linear Algebra</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/LaTeXML.css" type="text/css">
+    <link rel="stylesheet" href="../css/ltx-article.css" type="text/css">
+</head>
+
+<body>
+
+    <p>
+        <a href="../index.html">Contents</a> &gt; <a href="index.html">Vector Space</a> &gt; Subspace
+    </p>
+<article class="ltx_document">
+<section id="Ch1.S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1.2 </span>Subspace</h2>
+
+<div id="Ch1.S2.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.2.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch1.S2.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Ch1.S2.Thmdefinition1.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> be a vector space over a field <math id="Ch1.S2.Thmdefinition1.p1.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>. A subset <math id="Ch1.S2.Thmdefinition1.p1.m3" class="ltx_Math" alttext="U\subseteq V" display="inline"><mrow><mi>U</mi><mo>⊆</mo><mi>V</mi></mrow></math> is a <span class="ltx_text ltx_font_bold">subspace</span> if</p>
+<ul id="Ch1.S2.I1" class="ltx_itemize">
+<li id="Ch1.S2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Ch1.S2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="Ch1.S2.I1.i1.p1.m1" class="ltx_Math" alttext="0\in U" display="inline"><mrow><mn>0</mn><mo>∈</mo><mi>U</mi></mrow></math>,</p>
+</div>
+</li>
+<li id="Ch1.S2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Ch1.S2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="Ch1.S2.I1.i2.p1.m1" class="ltx_Math" alttext="u,v\in U" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><mi>U</mi></mrow></math> implies <math id="Ch1.S2.I1.i2.p1.m2" class="ltx_Math" alttext="u+v\in U" display="inline"><mrow><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo>∈</mo><mi>U</mi></mrow></math>,</p>
+</div>
+</li>
+<li id="Ch1.S2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Ch1.S2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="Ch1.S2.I1.i3.p1.m1" class="ltx_Math" alttext="\lambda\in F" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>F</mi></mrow></math>, <math id="Ch1.S2.I1.i3.p1.m2" class="ltx_Math" alttext="u\in U" display="inline"><mrow><mi>u</mi><mo>∈</mo><mi>U</mi></mrow></math> implies <math id="Ch1.S2.I1.i3.p1.m3" class="ltx_Math" alttext="\lambda u\in U" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>u</mi></mrow><mo>∈</mo><mi>U</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="Ch1.S2.Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.2.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch1.S2.Thmdefinition2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Ch1.S2.Thmdefinition2.p1.m1" class="ltx_Math" alttext="\{U_{i}\}_{i\in I}" display="inline"><msub><mrow><mo stretchy="false">{</mo><msub><mi>U</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub></math> be a family of subspaces of <math id="Ch1.S2.Thmdefinition2.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.
+The <span class="ltx_text ltx_font_bold">sum</span> <math id="Ch1.S2.Thmdefinition2.p1.m3" class="ltx_Math" alttext="\sum_{i\in I}U_{i}" display="inline"><mrow><msub><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>U</mi><mi>i</mi></msub></mrow></math> is the set of all finite sums</p>
+<table id="Ch1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.Ex1.m1" class="ltx_Math" alttext="u_{i_{1}}+\dots+u_{i_{k}},\qquad k\geq 0,\;i_{j}\in I,\;u_{i_{j}}\in U_{i_{j}}," display="block"><mrow><mrow><mrow><mrow><mrow><msub><mi>u</mi><msub><mi>i</mi><mn>1</mn></msub></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>u</mi><msub><mi>i</mi><mi>k</mi></msub></msub></mrow><mo rspace="2.167em">,</mo><mi>k</mi></mrow><mo>≥</mo><mn>0</mn></mrow><mo rspace="0.447em">,</mo><mrow><mrow><msub><mi>i</mi><mi>j</mi></msub><mo>∈</mo><mi>I</mi></mrow><mo rspace="0.447em">,</mo><mrow><msub><mi>u</mi><msub><mi>i</mi><mi>j</mi></msub></msub><mo>∈</mo><msub><mi>U</mi><msub><mi>i</mi><mi>j</mi></msub></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where the empty sum (<math id="Ch1.S2.Thmdefinition2.p1.m4" class="ltx_Math" alttext="k=0" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow></math>) is understood as <math id="Ch1.S2.Thmdefinition2.p1.m5" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.</p>
+</div>
+</div>
+<div id="Ch1.S2.Thmdefinition3" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 1.2.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch1.S2.Thmdefinition3.p1" class="ltx_para">
+<p class="ltx_p"><math id="Ch1.S2.Thmdefinition3.p1.m1" class="ltx_Math" alttext="\sum_{i\in I}U_{i}" display="inline"><mrow><msub><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>U</mi><mi>i</mi></msub></mrow></math> is a subspace of <math id="Ch1.S2.Thmdefinition3.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, and it is the smallest subspace containing every <math id="Ch1.S2.Thmdefinition3.p1.m3" class="ltx_Math" alttext="U_{i}" display="inline"><msub><mi>U</mi><mi>i</mi></msub></math>.</p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="Ch1.S2.p1" class="ltx_para">
+<p class="ltx_p">Each <math id="Ch1.S2.p1.m1" class="ltx_Math" alttext="U_{i}" display="inline"><msub><mi>U</mi><mi>i</mi></msub></math> is contained in the sum (take <math id="Ch1.S2.p1.m2" class="ltx_Math" alttext="k=1" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow></math>). The sum is a subspace: <math id="Ch1.S2.p1.m3" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> is the empty sum; the sum of two finite sums is a finite sum; scalar multiplication distributes over a finite sum. If <math id="Ch1.S2.p1.m4" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> is a subspace containing all <math id="Ch1.S2.p1.m5" class="ltx_Math" alttext="U_{i}" display="inline"><msub><mi>U</mi><mi>i</mi></msub></math>, then <math id="Ch1.S2.p1.m6" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> contains every finite sum of their elements, hence <math id="Ch1.S2.p1.m7" class="ltx_Math" alttext="\sum_{i\in I}U_{i}\subseteq W" display="inline"><mrow><mrow><msub><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>U</mi><mi>i</mi></msub></mrow><mo>⊆</mo><mi>W</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="Ch1.S2.Thmdefinition4" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.2.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch1.S2.Thmdefinition4.p1" class="ltx_para">
+<p class="ltx_p">The sum <math id="Ch1.S2.Thmdefinition4.p1.m1" class="ltx_Math" alttext="\sum_{i\in I}U_{i}" display="inline"><mrow><msub><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>U</mi><mi>i</mi></msub></mrow></math> is a <span class="ltx_text ltx_font_bold">direct sum</span>, denoted <math id="Ch1.S2.Thmdefinition4.p1.m2" class="ltx_Math" alttext="\bigoplus_{i\in I}U_{i}" display="inline"><mrow><msub><mo>⨁</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>U</mi><mi>i</mi></msub></mrow></math>, if every vector in the sum admits a unique representation <math id="Ch1.S2.Thmdefinition4.p1.m3" class="ltx_Math" alttext="u_{i_{1}}+\dots+u_{i_{k}}" display="inline"><mrow><msub><mi>u</mi><msub><mi>i</mi><mn>1</mn></msub></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>u</mi><msub><mi>i</mi><mi>k</mi></msub></msub></mrow></math> with <math id="Ch1.S2.Thmdefinition4.p1.m4" class="ltx_Math" alttext="u_{i_{j}}\in U_{i_{j}}" display="inline"><mrow><msub><mi>u</mi><msub><mi>i</mi><mi>j</mi></msub></msub><mo>∈</mo><msub><mi>U</mi><msub><mi>i</mi><mi>j</mi></msub></msub></mrow></math> and <math id="Ch1.S2.Thmdefinition4.p1.m5" class="ltx_Math" alttext="i_{j}" display="inline"><msub><mi>i</mi><mi>j</mi></msub></math> distinct.</p>
+</div>
+</div>
+<div id="Ch1.S2.Thmdefinition5" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 1.2.5</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch1.S2.Thmdefinition5.p1" class="ltx_para">
+<p class="ltx_p"><math id="Ch1.S2.Thmdefinition5.p1.m1" class="ltx_Math" alttext="\sum_{i\in I}U_{i}" display="inline"><mrow><msub><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>U</mi><mi>i</mi></msub></mrow></math> is a direct sum if and only if whenever</p>
+<table id="Ch1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.Ex2.m1" class="ltx_Math" alttext="\sum_{i\in I}u_{i}=0,\qquad u_{i}\in U_{i}\text{ (only finitely many nonzero)}," display="block"><mrow><mrow><mrow><mrow><munder><mo movablelimits="false">∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></munder><msub><mi>u</mi><mi>i</mi></msub></mrow><mo>=</mo><mn>0</mn></mrow><mo rspace="2.167em">,</mo><mrow><msub><mi>u</mi><mi>i</mi></msub><mo>∈</mo><mrow><msub><mi>U</mi><mi>i</mi></msub><mo>⁢</mo><mtext> (only finitely many nonzero)</mtext></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">then <math id="Ch1.S2.Thmdefinition5.p1.m2" class="ltx_Math" alttext="u_{i}=0" display="inline"><mrow><msub><mi>u</mi><mi>i</mi></msub><mo>=</mo><mn>0</mn></mrow></math> for all <math id="Ch1.S2.Thmdefinition5.p1.m3" class="ltx_Math" alttext="i\in I" display="inline"><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></math>.</p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="Ch1.S2.p2" class="ltx_para">
+<p class="ltx_p">If the sum is direct, <math id="Ch1.S2.p2.m1" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> has the unique representation <math id="Ch1.S2.p2.m2" class="ltx_Math" alttext="0=\sum_{i}0" display="inline"><mrow><mn>0</mn><mo rspace="0.111em">=</mo><mrow><msub><mo>∑</mo><mi>i</mi></msub><mn>0</mn></mrow></mrow></math>, so all <math id="Ch1.S2.p2.m3" class="ltx_Math" alttext="u_{i}=0" display="inline"><mrow><msub><mi>u</mi><mi>i</mi></msub><mo>=</mo><mn>0</mn></mrow></math>. Conversely, if <math id="Ch1.S2.p2.m4" class="ltx_Math" alttext="\sum_{i}u_{i}=\sum_{i}v_{i}" display="inline"><mrow><mrow><msub><mo>∑</mo><mi>i</mi></msub><msub><mi>u</mi><mi>i</mi></msub></mrow><mo rspace="0.111em">=</mo><mrow><msub><mo>∑</mo><mi>i</mi></msub><msub><mi>v</mi><mi>i</mi></msub></mrow></mrow></math>, then <math id="Ch1.S2.p2.m5" class="ltx_Math" alttext="\sum_{i}(u_{i}-v_{i})=0" display="inline"><mrow><mrow><msub><mo>∑</mo><mi>i</mi></msub><mrow><mo lspace="0em" stretchy="false">(</mo><mrow><msub><mi>u</mi><mi>i</mi></msub><mo>−</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, hence <math id="Ch1.S2.p2.m6" class="ltx_Math" alttext="u_{i}-v_{i}=0" display="inline"><mrow><mrow><msub><mi>u</mi><mi>i</mi></msub><mo>−</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="Ch1.S2.p2.m7" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>, giving uniqueness.
+∎</p>
+</div>
+</div>
+<div id="Ch1.S2.Thmdefinition6" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 1.2.6</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch1.S2.Thmdefinition6.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Ch1.S2.Thmdefinition6.p1.m1" class="ltx_Math" alttext="U,W\subseteq V" display="inline"><mrow><mrow><mi>U</mi><mo>,</mo><mi>W</mi></mrow><mo>⊆</mo><mi>V</mi></mrow></math> be subspaces. The sum <math id="Ch1.S2.Thmdefinition6.p1.m2" class="ltx_Math" alttext="U+W" display="inline"><mrow><mi>U</mi><mo>+</mo><mi>W</mi></mrow></math> is a direct sum if and only if <math id="Ch1.S2.Thmdefinition6.p1.m3" class="ltx_Math" alttext="U\cap W=\{0\}" display="inline"><mrow><mrow><mi>U</mi><mo>∩</mo><mi>W</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="Ch1.S2.p3" class="ltx_para">
+<p class="ltx_p">If <math id="Ch1.S2.p3.m1" class="ltx_Math" alttext="v\in U\cap W" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><mi>U</mi><mo>∩</mo><mi>W</mi></mrow></mrow></math> is nonzero, then <math id="Ch1.S2.p3.m2" class="ltx_Math" alttext="v=v+0=0+v" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><mi>v</mi><mo>+</mo><mn>0</mn></mrow><mo>=</mo><mrow><mn>0</mn><mo>+</mo><mi>v</mi></mrow></mrow></math> gives two distinct representations. Conversely, if <math id="Ch1.S2.p3.m3" class="ltx_Math" alttext="U\cap W=\{0\}" display="inline"><mrow><mrow><mi>U</mi><mo>∩</mo><mi>W</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="Ch1.S2.p3.m4" class="ltx_Math" alttext="u+w=u^{\prime}+w^{\prime}" display="inline"><mrow><mrow><mi>u</mi><mo>+</mo><mi>w</mi></mrow><mo>=</mo><mrow><msup><mi>u</mi><mo>′</mo></msup><mo>+</mo><msup><mi>w</mi><mo>′</mo></msup></mrow></mrow></math>, then <math id="Ch1.S2.p3.m5" class="ltx_Math" alttext="u-u^{\prime}=w^{\prime}-w\in U\cap W=\{0\}" display="inline"><mrow><mrow><mi>u</mi><mo>−</mo><msup><mi>u</mi><mo>′</mo></msup></mrow><mo>=</mo><mrow><msup><mi>w</mi><mo>′</mo></msup><mo>−</mo><mi>w</mi></mrow><mo>∈</mo><mrow><mi>U</mi><mo>∩</mo><mi>W</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></math>, so <math id="Ch1.S2.p3.m6" class="ltx_Math" alttext="u=u^{\prime}" display="inline"><mrow><mi>u</mi><mo>=</mo><msup><mi>u</mi><mo>′</mo></msup></mrow></math> and <math id="Ch1.S2.p3.m7" class="ltx_Math" alttext="w=w^{\prime}" display="inline"><mrow><mi>w</mi><mo>=</mo><msup><mi>w</mi><mo>′</mo></msup></mrow></math>.
+∎</p>
+</div>
+</div>
+</section>
+</article>
+
+    <hr>
+
+    <p>
+        <a href="s01.html">Prev</a>
+        | <a href="index.html">Contents</a>
+        | Next
+    </p>
+    <p><a href="../index.html">Back to Index</a></p>
+</body>
+
+</html>

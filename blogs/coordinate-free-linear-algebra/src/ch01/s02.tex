@@ -1,0 +1,66 @@
+\documentclass{book}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}[definition]{Proposition}
+
+\setcounter{chapter}{1}
+\setcounter{section}{1}
+
+\begin{document}
+
+\section{Subspace}
+
+\begin{definition}
+Let $V$ be a vector space over a field $F$. A subset $U \subseteq V$ is a \textbf{subspace} if
+\begin{itemize}
+    \item $0 \in U$,
+    \item $u, v \in U$ implies $u + v \in U$,
+    \item $\lambda \in F$, $u \in U$ implies $\lambda u \in U$.
+\end{itemize}
+\end{definition}
+
+\begin{definition}
+Let $\{U_{i}\}_{i \in I}$ be a family of subspaces of $V$.
+The \textbf{sum} $\sum_{i \in I} U_{i}$ is the set of all finite sums
+\[
+u_{i_{1}} + \dots + u_{i_{k}}, \qquad k \geq 0,\; i_{j} \in I,\; u_{i_{j}} \in U_{i_{j}},
+\]
+where the empty sum ($k = 0$) is understood as $0$.
+\end{definition}
+
+\begin{proposition}
+$\sum_{i \in I} U_{i}$ is a subspace of $V$, and it is the smallest subspace containing every $U_{i}$.
+\end{proposition}
+
+\begin{proof}
+Each $U_{i}$ is contained in the sum (take $k = 1$). The sum is a subspace: $0$ is the empty sum; the sum of two finite sums is a finite sum; scalar multiplication distributes over a finite sum. If $W$ is a subspace containing all $U_{i}$, then $W$ contains every finite sum of their elements, hence $\sum_{i \in I} U_{i} \subseteq W$.
+\end{proof}
+
+\begin{definition}
+The sum $\sum_{i \in I} U_{i}$ is a \textbf{direct sum}, denoted $\bigoplus_{i \in I} U_{i}$, if every vector in the sum admits a unique representation $u_{i_{1}} + \dots + u_{i_{k}}$ with $u_{i_{j}} \in U_{i_{j}}$ and $i_{j}$ distinct.
+\end{definition}
+
+\begin{proposition}
+$\sum_{i \in I} U_{i}$ is a direct sum if and only if whenever
+\[
+\sum_{i \in I} u_{i} = 0, \qquad u_{i} \in U_{i}\text{ (only finitely many nonzero)},
+\]
+then $u_{i} = 0$ for all $i \in I$.
+\end{proposition}
+
+\begin{proof}
+If the sum is direct, $0$ has the unique representation $0 = \sum_{i} 0$, so all $u_{i} = 0$. Conversely, if $\sum_{i} u_{i} = \sum_{i} v_{i}$, then $\sum_{i} (u_{i} - v_{i}) = 0$, hence $u_{i} - v_{i} = 0$ for all $i$, giving uniqueness.
+\end{proof}
+
+\begin{proposition}
+Let $U, W \subseteq V$ be subspaces. The sum $U + W$ is a direct sum if and only if $U \cap W = \{0\}$.
+\end{proposition}
+
+\begin{proof}
+If $v \in U \cap W$ is nonzero, then $v = v + 0 = 0 + v$ gives two distinct representations. Conversely, if $U \cap W = \{0\}$ and $u + w = u' + w'$, then $u - u' = w' - w \in U \cap W = \{0\}$, so $u = u'$ and $w = w'$.
+\end{proof}
+
+\end{document}
