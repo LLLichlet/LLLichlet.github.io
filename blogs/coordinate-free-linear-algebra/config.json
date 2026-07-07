@@ -1,0 +1,41 @@
+{
+    "index.html": {
+        "title": "Coordinate-Free Linear Algebra",
+        "katex": false,
+        "back": "../index.html",
+        "back_text": "Back to Blogs",
+        "breadcrumb": null,
+        "nav": null
+    },
+    "ch01/index.html": {
+        "title": "Vector Space — Coordinate-Free Linear Algebra",
+        "katex": false,
+        "back": "../index.html",
+        "back_text": "Back to Index",
+        "breadcrumb": [
+            {"text": "Contents", "href": "../index.html"},
+            {"text": "Vector Space", "href": null}
+        ],
+        "nav": {
+            "prev": null,
+            "contents": "../index.html",
+            "next": null
+        }
+    },
+    "ch01/s01.html": {
+        "title": "Definition — Coordinate-Free Linear Algebra",
+        "katex": true,
+        "back": "../index.html",
+        "back_text": "Back to Index",
+        "breadcrumb": [
+            {"text": "Contents", "href": "../index.html"},
+            {"text": "Vector Space", "href": "index.html"},
+            {"text": "Definition", "href": null}
+        ],
+        "nav": {
+            "prev": null,
+            "contents": "index.html",
+            "next": null
+        }
+    }
+}
