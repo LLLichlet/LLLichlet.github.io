@@ -56,4 +56,23 @@ The operations are well-defined: if $v + U = v' + U$ and $w + U = w' + U$, then 
 The zero vector is $0 + U = U$. The additive inverse of $v + U$ is $(-v) + U$. The eight vector space axioms follow directly from the corresponding axioms in $V$.
 \end{proof}
 
+\begin{proposition}
+For any linear map $f \colon V \to W$,
+\[
+V / \ker f \cong \operatorname{im} f.
+\]
+\end{proposition}
+
+\begin{proof}
+Define $\Phi \colon V / \ker f \to \operatorname{im} f$ by $\Phi(v + \ker f) = f(v)$.
+
+Well-defined: if $v + \ker f = w + \ker f$, then $v - w \in \ker f$, so $f(v) - f(w) = f(v - w) = 0$, hence $f(v) = f(w)$.
+
+$\Phi$ is linear: $\Phi((v + \ker f) + (w + \ker f)) = \Phi((v + w) + \ker f) = f(v + w) = f(v) + f(w) = \Phi(v + \ker f) + \Phi(w + \ker f)$, and similarly for scalar multiplication.
+
+Injective: if $\Phi(v + \ker f) = 0$, then $f(v) = 0$, so $v \in \ker f$, hence $v + \ker f = 0 + \ker f$.
+
+Surjective: for any $f(v) \in \operatorname{im} f$, we have $\Phi(v + \ker f) = f(v)$.
+\end{proof}
+
 \end{document}
