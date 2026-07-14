@@ -1,8 +1,11 @@
+from __future__ import annotations
+
 import hashlib
 import json
 import os
 import re
 import subprocess
+from typing import Any
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -19,26 +22,28 @@ CACHE = os.path.join(ROOT, ".cache")
 HASHES = os.path.join(CACHE, "hashes.json")
 os.makedirs(CACHE, exist_ok=True)
 
+Breadcrumb = list[dict[str, str | None]] | None
+Nav = dict[str, str | None] | None
 
-def sha256(path):
+
+def sha256(path: str) -> str:
     with open(path, "rb") as f:
         return hashlib.sha256(f.read()).hexdigest()
 
 
-def load_hashes():
+def load_hashes() -> dict[str, str]:
     if os.path.exists(HASHES):
         with open(HASHES, encoding="utf-8") as f:
             return json.load(f)
     return {}
 
 
-def save_hashes(h):
+def save_hashes(h: dict[str, str]) -> None:
     with open(HASHES, "w", encoding="utf-8", newline="\n") as f:
         json.dump(h, f)
 
 
-def compile_tex(src):
-    """Compile .tex -> LaTeXML HTML, return path to generated HTML."""
+def compile_tex(src: str) -> str:
     name = os.path.splitext(os.path.basename(src))[0]
     xml = os.path.join(CACHE, f"{name}.xml")
     html = os.path.join(CACHE, f"{name}.html")
@@ -51,8 +56,7 @@ def compile_tex(src):
     return html
 
 
-def body_from_tex(src, stored):
-    """Compile tex if dirty; return <article> HTML string."""
+def body_from_tex(src: str, stored: dict[str, str]) -> str:
     h = sha256(src)
     key = os.path.relpath(src, ROOT).replace("\\", "/")
     cache_html = os.path.join(CACHE, f"{key}.html")
@@ -74,10 +78,10 @@ def body_from_tex(src, stored):
     return m.group(0) if m else raw
 
 
-def render_breadcrumb(items):
+def render_breadcrumb(items: Breadcrumb) -> str:
     if not items:
         return ""
-    parts = []
+    parts: list[str] = []
     for item in items:
         if item["href"]:
             parts.append(f'<a href="{item["href"]}">{item["text"]}</a>')
@@ -86,7 +90,7 @@ def render_breadcrumb(items):
     return "\n    <p>\n        " + " &gt; ".join(parts) + "\n    </p>\n"
 
 
-def render_navbar(nav):
+def render_navbar(nav: Nav) -> str:
     if not nav:
         return ""
     prev = f'<a href="{nav["prev"]}">Prev</a>' if nav["prev"] else "Prev"
@@ -103,7 +107,7 @@ def render_navbar(nav):
     )
 
 
-def css_links(depth):
+def css_links(depth: int) -> str:
     prefix = "../" * depth
     return (
         f'<link rel="stylesheet" href="{prefix}css/LaTeXML.css" type="text/css">\n'
@@ -111,7 +115,15 @@ def css_links(depth):
     )
 
 
-def wrap_page(title, css, body, breadcrumb, nav, back, back_text):
+def wrap_page(
+    title: str,
+    css: str,
+    body: str,
+    breadcrumb: Breadcrumb,
+    nav: Nav,
+    back: str,
+    back_text: str,
+) -> str:
     return (
         "<!DOCTYPE html>\n"
         '<html lang="en-US">\n'
@@ -133,9 +145,9 @@ def wrap_page(title, css, body, breadcrumb, nav, back, back_text):
     )
 
 
-def build():
+def build() -> None:
     with open(os.path.join(ROOT, "config.json"), encoding="utf-8") as f:
-        config = json.load(f)
+        config: dict[str, Any] = json.load(f)
 
     stored = load_hashes()
 
@@ -143,7 +155,7 @@ def build():
         src = os.path.join(ROOT, cfg["src"])
         dest = os.path.join(ROOT, out_path)
 
-        depth = out_path.count("/")
+        depth: int = out_path.count("/")
         os.makedirs(os.path.dirname(dest), exist_ok=True)
 
         body = body_from_tex(src, stored)
