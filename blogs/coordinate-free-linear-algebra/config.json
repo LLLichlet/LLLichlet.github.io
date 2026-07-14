@@ -17,7 +17,7 @@
         "nav": {
             "prev": null,
             "contents": "../index.html",
-            "next": null
+            "next": "../ch02/index.html"
         },
         "back": "../index.html",
         "back_text": "Back to Index"
@@ -112,6 +112,37 @@
         ],
         "nav": {
             "prev": "s05.html",
+            "contents": "index.html",
+            "next": "../ch02/index.html"
+        },
+        "back": "../index.html",
+        "back_text": "Back to Index"
+    },
+    "ch02/index.html": {
+        "src": "src/ch02/index.tex",
+        "title": "Dual Spaces — Coordinate-Free Linear Algebra",
+        "breadcrumb": [
+            {"text": "Contents", "href": "../index.html"},
+            {"text": "Dual Spaces", "href": null}
+        ],
+        "nav": {
+            "prev": "../ch01/index.html",
+            "contents": "../index.html",
+            "next": "s01.html"
+        },
+        "back": "../index.html",
+        "back_text": "Back to Index"
+    },
+    "ch02/s01.html": {
+        "src": "src/ch02/s01.tex",
+        "title": "Definition — Coordinate-Free Linear Algebra",
+        "breadcrumb": [
+            {"text": "Contents", "href": "../index.html"},
+            {"text": "Dual Spaces", "href": "index.html"},
+            {"text": "Definition", "href": null}
+        ],
+        "nav": {
+            "prev": "index.html",
             "contents": "index.html",
             "next": null
         },

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Definition — Coordinate-Free Linear Algebra</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/LaTeXML.css" type="text/css">
+    <link rel="stylesheet" href="../css/ltx-article.css" type="text/css">
+</head>
+
+<body>
+
+    <p>
+        <a href="../index.html">Contents</a> &gt; <a href="index.html">Dual Spaces</a> &gt; Definition
+    </p>
+<article class="ltx_document">
+<section id="Ch2.S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2.1 </span>Definition</h2>
+
+<div id="Ch2.S1.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 2.1.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch2.S1.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Ch2.S1.Thmdefinition1.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> be a vector space over a field <math id="Ch2.S1.Thmdefinition1.p1.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>. A <span class="ltx_text ltx_font_bold">linear functional</span> on <math id="Ch2.S1.Thmdefinition1.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a linear map <math id="Ch2.S1.Thmdefinition1.p1.m4" class="ltx_Math" alttext="\varphi\colon V\to F" display="inline"><mrow><mi>φ</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>V</mi><mo stretchy="false">→</mo><mi>F</mi></mrow></mrow></math>. The <span class="ltx_text ltx_font_bold">dual space</span> of <math id="Ch2.S1.Thmdefinition1.p1.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, denoted <math id="Ch2.S1.Thmdefinition1.p1.m6" class="ltx_Math" alttext="V^{*}" display="inline"><msup><mi>V</mi><mo>∗</mo></msup></math>, is the set of all linear functionals on <math id="Ch2.S1.Thmdefinition1.p1.m7" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>:</p>
+<table id="Ch2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.Ex1.m1" class="ltx_Math" alttext="V^{*}=\operatorname{Hom}(V,F)=\{\,\varphi\colon V\to F\mid\varphi\text{ is %
+linear}\,\}." display="block"><mrow><mrow><msup><mi>V</mi><mo>∗</mo></msup><mo>=</mo><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo rspace="0.170em" stretchy="false">{</mo><mi>φ</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>V</mi><mo stretchy="false">→</mo><mrow><mi>F</mi><mo>∣</mo><mrow><mi>φ</mi><mo>⁢</mo><mtext> is linear</mtext></mrow></mrow></mrow><mo lspace="0.170em" stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="Ch2.S1.Thmdefinition2" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 2.1.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch2.S1.Thmdefinition2.p1" class="ltx_para">
+<p class="ltx_p"><math id="Ch2.S1.Thmdefinition2.p1.m1" class="ltx_Math" alttext="V^{*}" display="inline"><msup><mi>V</mi><mo>∗</mo></msup></math> is a vector space over <math id="Ch2.S1.Thmdefinition2.p1.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> with operations defined pointwise:</p>
+<table id="Ch2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.Ex2.m1" class="ltx_Math" alttext="(\varphi+\psi)(v)=\varphi(v)+\psi(v),\qquad(\lambda\varphi)(v)=\lambda\cdot%
+\varphi(v)," display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>φ</mi><mo>+</mo><mi>ψ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo rspace="2.167em">,</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>φ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>λ</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>φ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all <math id="Ch2.S1.Thmdefinition2.p1.m3" class="ltx_Math" alttext="\varphi,\psi\in V^{*}" display="inline"><mrow><mrow><mi>φ</mi><mo>,</mo><mi>ψ</mi></mrow><mo>∈</mo><msup><mi>V</mi><mo>∗</mo></msup></mrow></math>, <math id="Ch2.S1.Thmdefinition2.p1.m4" class="ltx_Math" alttext="\lambda\in F" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>F</mi></mrow></math>, and <math id="Ch2.S1.Thmdefinition2.p1.m5" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math>.</p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="Ch2.S1.p1" class="ltx_para">
+<p class="ltx_p"><math id="Ch2.S1.p1.m1" class="ltx_Math" alttext="V^{*}\subseteq F^{V}" display="inline"><mrow><msup><mi>V</mi><mo>∗</mo></msup><mo>⊆</mo><msup><mi>F</mi><mi>V</mi></msup></mrow></math>, and the pointwise operations are exactly those of the function space <math id="Ch2.S1.p1.m2" class="ltx_Math" alttext="F^{V}" display="inline"><msup><mi>F</mi><mi>V</mi></msup></math>. We use the subspace criteria, where the zero functional <math id="Ch2.S1.p1.m3" class="ltx_Math" alttext="v\mapsto 0" display="inline"><mrow><mi>v</mi><mo stretchy="false">↦</mo><mn>0</mn></mrow></math> is linear; the sum of two linear maps is linear; a scalar multiple of a linear map is linear. Hence <math id="Ch2.S1.p1.m4" class="ltx_Math" alttext="V^{*}" display="inline"><msup><mi>V</mi><mo>∗</mo></msup></math> is a subspace of <math id="Ch2.S1.p1.m5" class="ltx_Math" alttext="F^{V}" display="inline"><msup><mi>F</mi><mi>V</mi></msup></math>, and therefore a vector space.
+∎</p>
+</div>
+</div>
+<div id="Ch2.S1.Thmdefinition3" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 2.1.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch2.S1.Thmdefinition3.p1" class="ltx_para">
+<p class="ltx_p">For <math id="Ch2.S1.Thmdefinition3.p1.m1" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math> and <math id="Ch2.S1.Thmdefinition3.p1.m2" class="ltx_Math" alttext="\varphi\in V^{*}" display="inline"><mrow><mi>φ</mi><mo>∈</mo><msup><mi>V</mi><mo>∗</mo></msup></mrow></math>, we write</p>
+<table id="Ch2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.Ex3.m1" class="ltx_Math" alttext="\langle\varphi,v\rangle=\varphi(v)." display="block"><mrow><mrow><mrow><mo stretchy="false">⟨</mo><mi>φ</mi><mo>,</mo><mi>v</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The map <math id="Ch2.S1.Thmdefinition3.p1.m3" class="ltx_Math" alttext="\langle\cdot,\cdot\rangle\colon V^{*}\times V\to F" display="inline"><mrow><mrow><mo stretchy="false">⟨</mo><mo lspace="0em" rspace="0em">⋅</mo><mo rspace="0em">,</mo><mo lspace="0em" rspace="0em">⋅</mo><mo rspace="0.278em" stretchy="false">⟩</mo></mrow><mo rspace="0.278em">:</mo><mrow><mrow><msup><mi>V</mi><mo>∗</mo></msup><mo lspace="0.222em" rspace="0.222em">×</mo><mi>V</mi></mrow><mo stretchy="false">→</mo><mi>F</mi></mrow></mrow></math> is called the <span class="ltx_text ltx_font_bold">natural pairing</span> between <math id="Ch2.S1.Thmdefinition3.p1.m4" class="ltx_Math" alttext="V^{*}" display="inline"><msup><mi>V</mi><mo>∗</mo></msup></math> and <math id="Ch2.S1.Thmdefinition3.p1.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+</div>
+<div id="Ch2.S1.Thmdefinition4" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 2.1.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch2.S1.Thmdefinition4.p1" class="ltx_para">
+<p class="ltx_p">The natural pairing is bilinear: for all <math id="Ch2.S1.Thmdefinition4.p1.m1" class="ltx_Math" alttext="v,w\in V" display="inline"><mrow><mrow><mi>v</mi><mo>,</mo><mi>w</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>, <math id="Ch2.S1.Thmdefinition4.p1.m2" class="ltx_Math" alttext="\varphi,\psi\in V^{*}" display="inline"><mrow><mrow><mi>φ</mi><mo>,</mo><mi>ψ</mi></mrow><mo>∈</mo><msup><mi>V</mi><mo>∗</mo></msup></mrow></math>, and <math id="Ch2.S1.Thmdefinition4.p1.m3" class="ltx_Math" alttext="\lambda\in F" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>F</mi></mrow></math>,</p>
+<table id="Ch2.Ex4" class="ltx_equationgroup ltx_eqn_table">
+
+<tbody id="Ch2.Ex4X"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex4X.m2" class="ltx_Math" alttext="\displaystyle\langle\varphi+\psi,v\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mrow><mi>φ</mi><mo>+</mo><mi>ψ</mi></mrow><mo>,</mo><mi>v</mi><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex4X.m3" class="ltx_Math" alttext="\displaystyle=\langle\varphi,v\rangle+\langle\psi,v\rangle," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>φ</mi><mo>,</mo><mi>v</mi><mo stretchy="false">⟩</mo></mrow><mo>+</mo><mrow><mo stretchy="false">⟨</mo><mi>ψ</mi><mo>,</mo><mi>v</mi><mo stretchy="false">⟩</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex4Xa"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex4Xa.m2" class="ltx_Math" alttext="\displaystyle\langle\lambda\varphi,v\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>φ</mi></mrow><mo>,</mo><mi>v</mi><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex4Xa.m3" class="ltx_Math" alttext="\displaystyle=\lambda\langle\varphi,v\rangle," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>φ</mi><mo>,</mo><mi>v</mi><mo stretchy="false">⟩</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex4Xb"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex4Xb.m2" class="ltx_Math" alttext="\displaystyle\langle\varphi,v+w\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mi>φ</mi><mo>,</mo><mrow><mi>v</mi><mo>+</mo><mi>w</mi></mrow><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex4Xb.m3" class="ltx_Math" alttext="\displaystyle=\langle\varphi,v\rangle+\langle\varphi,w\rangle," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>φ</mi><mo>,</mo><mi>v</mi><mo stretchy="false">⟩</mo></mrow><mo>+</mo><mrow><mo stretchy="false">⟨</mo><mi>φ</mi><mo>,</mo><mi>w</mi><mo stretchy="false">⟩</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex4Xc"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex4Xc.m2" class="ltx_Math" alttext="\displaystyle\langle\varphi,\lambda v\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mi>φ</mi><mo>,</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex4Xc.m3" class="ltx_Math" alttext="\displaystyle=\lambda\langle\varphi,v\rangle." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>φ</mi><mo>,</mo><mi>v</mi><mo stretchy="false">⟩</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="Ch2.S1.p2" class="ltx_para">
+<p class="ltx_p">The first two follow from the definition of addition and scalar multiplication in <math id="Ch2.S1.p2.m1" class="ltx_Math" alttext="V^{*}" display="inline"><msup><mi>V</mi><mo>∗</mo></msup></math>; the last two follow from the linearity of <math id="Ch2.S1.p2.m2" class="ltx_Math" alttext="\varphi" display="inline"><mi>φ</mi></math>.
+∎</p>
+</div>
+</div>
+</section>
+</article>
+
+    <hr>
+
+    <p>
+        <a href="index.html">Prev</a>
+        | <a href="index.html">Contents</a>
+        | Next
+    </p>
+    <p><a href="../index.html">Back to Index</a></p>
+</body>
+
+</html>
