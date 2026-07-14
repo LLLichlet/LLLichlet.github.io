@@ -123,7 +123,9 @@ def wrap_page(
     nav: Nav,
     back: str,
     back_text: str,
+    depth: int,
 ) -> str:
+    license_rel = "../" * (depth + 2) + "LICENSE"
     return (
         "<!DOCTYPE html>\n"
         '<html lang="en-US">\n'
@@ -139,6 +141,18 @@ def wrap_page(
         f"{body}\n"
         f"{render_navbar(nav)}"
         f'    <p><a href="{back}">{back_text}</a></p>\n'
+        "\n"
+        "    <hr>\n"
+        "\n"
+        "    <p><small>\n"
+        "        Copyright &copy; 2026 LLLichlet.\n"
+        "        Permission is granted to copy, distribute and/or modify this document\n"
+        "        under the terms of the <a"
+        f' href="{license_rel}">GNU Free Documentation License, Version 1.3</a>\n'
+        "        or any later version published by the Free Software Foundation;\n"
+        "        with no Invariant Sections, no Front-Cover Texts, and no Back-Cover"
+        " Texts.\n"
+        "    </small></p>\n"
         "</body>\n"
         "\n"
         "</html>\n"
@@ -168,6 +182,7 @@ def build() -> None:
             cfg.get("nav"),
             cfg["back"],
             cfg["back_text"],
+            depth,
         )
 
         with open(dest, "w", encoding="utf-8", newline="\n") as f:
