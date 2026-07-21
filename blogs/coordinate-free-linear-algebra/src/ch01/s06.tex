@@ -23,13 +23,7 @@ Let $U, W \subseteq V$ be subspaces. Then
 \end{proposition}
 
 \begin{proof}
-Define $f \colon U \to (U + W) / W$ by $f(u) = u + W$.
-
-$\ker f = U \cap W$: $f(u) = 0$ in $(U + W) / W$ iff $u \in W$, and $u \in U$ by definition.
-
-$\operatorname{im} f = (U + W) / W$: every element of $(U + W) / W$ has the form $u + w + W = u + W = f(u)$ for some $u \in U$, $w \in W$.
-
-By \href{s04.html}{Proposition 1.4.5}, $U / \ker f \cong \operatorname{im} f$, i.e.\ $U / (U \cap W) \cong (U + W) / W$.
+Left as an exercise. (Hint: define a suitable linear map on $U$ and apply Proposition 1.4.5.)
 \end{proof}
 
 \begin{proposition}
@@ -40,13 +34,7 @@ Let $U \subseteq W \subseteq V$ be subspaces. Then
 \end{proposition}
 
 \begin{proof}
-Define $f \colon V / U \to V / W$ by $f(v + U) = v + W$. This is well-defined: if $v + U = v' + U$, then $v - v' \in U \subseteq W$, so $v + W = v' + W$.
-
-$\ker f = W / U$: $f(v + U) = 0 + W$ iff $v \in W$, i.e.\ $v + U \in W / U$.
-
-$\operatorname{im} f = V / W$: every coset $v + W$ is $f(v + U)$.
-
-By \href{s04.html}{Proposition 1.4.5}, $(V / U) / \ker f \cong \operatorname{im} f$, i.e.\ $(V / U) / (W / U) \cong V / W$.
+Left as an exercise. (Hint: define a suitable linear map on $V/U$ and apply Proposition 1.4.5.)
 \end{proof}
 
 \begin{proposition}
@@ -57,14 +45,7 @@ For any subspaces $U, W \subseteq V$,
 \end{proposition}
 
 \begin{proof}
-From Proposition 1.6.1, $(U + W) / W \cong U / (U \cap W)$. Isomorphisms preserve dimension (applying the isomorphism to each term of a chain gives a chain of equal length), so $\dim((U + W) / W) = \dim(U / (U \cap W))$.
-
-By \href{s05.html}{Proposition 1.5.3},
-$\dim(U + W) = \dim W + \dim((U + W) / W)$,
-and $\dim U = \dim(U \cap W) + \dim(U / (U \cap W))$.
-
-Subtracting gives $\dim(U + W) - \dim W = \dim U - \dim(U \cap W)$, i.e.\
-$\dim(U + W) + \dim(U \cap W) = \dim U + \dim W$.
+Left as an exercise. (Hint: apply Proposition 1.6.1 and Proposition 1.5.3.)
 \end{proof}
 
 \end{document}
