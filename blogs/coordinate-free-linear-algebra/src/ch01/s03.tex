@@ -23,6 +23,20 @@ Let $V$, $W$ be vector spaces over a field $F$. A map $f \colon V \to W$ is \tex
 \end{definition}
 
 \begin{definition}
+The set of all linear maps from $V$ to $W$ is denoted
+\[
+\operatorname{Hom}(V, W) = \{\, f \colon V \to W \mid f \text{ is linear} \,\}.
+\end{definition}
+
+The projection maps
+\[
+\pi_{1} \colon V \times W \to V,\; (v, w) \mapsto v,
+\qquad
+\pi_{2} \colon V \times W \to W,\; (v, w) \mapsto w,
+\]
+are linear. More generally, for any family $\{V_{i}\}_{i \in I}$, the projections $\pi_{j} \colon \prod_{i \in I} V_{i} \to V_{j}$ defined by $(v_{i})_{i \in I} \mapsto v_{j}$ are linear. (Exercise.)
+
+\begin{definition}
 For a linear map $f \colon V \to W$, the \textbf{kernel} and \textbf{image} are
 \[
 \ker f = \{\, v \in V \mid f(v) = 0 \,\}, \qquad
